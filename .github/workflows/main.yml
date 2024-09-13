@@ -1,1 +1,29 @@
+name: sampletest
+
+on:
+  push:
+    branches:
+      - main
+ 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt-openjdk'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Run Java class
+        run: mvn exec:java -Dexec.mainClass="com.te.Samp" # Replace with your fully qualified main class
+
 
