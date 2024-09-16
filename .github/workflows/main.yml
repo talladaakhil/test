@@ -19,6 +19,9 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: fix file
+        run: chmod +x ./SampleTest/src/com/te/Samp.java.sh
+
       - name: Compile Java code
         run: |
           SampleTest/src/com/te/Samp.java
