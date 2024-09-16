@@ -24,10 +24,10 @@ jobs:
 
       - name: Compile Java code
         run: |
-          SampleTest/src/com/te/Samp.java
+          src/com/te/Samp.java
 
       - name: Run Java class
         run: |
-          java -cp SampleTest/src/com/te/Samp
+          java -cp src/com/te/Samp
 
 
