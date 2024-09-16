@@ -19,15 +19,9 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: fix file
-        run: chmod +x ./SampleTest/src/com/te/Samp.java
+      - name: Build with Maven
+        run: mvn clean install
 
-      - name: Compile Java code
-        run: |
-          src/com/te/Samp.java
-
-      - name: Run Java class
-        run: |
-          java -cp src/com/te/Samp
-
+      - name: Run tests
+        run: mvn test
 
