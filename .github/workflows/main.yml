@@ -19,10 +19,12 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Compile Java code
+        run: |
+          javac src/com.te/Samp.java
 
       - name: Run Java class
-        run: mvn exec:java -Dexec.mainClass="com.te.Samp" # Replace with your fully qualified main class
+        run: |
+          java -cp src/com.te/Samp.java
 
 
