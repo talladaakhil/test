@@ -19,12 +19,15 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: fix file
+        run: chmod +x ./SampleTest/src/com/te/Samp.java
+
       - name: Compile Java code
         run: |
-          javac src/com.te/Samp.java
+          SampleTest/src/com/te/Samp.java
 
       - name: Run Java class
         run: |
-          java -cp src/com.te/Samp.java
+          java -cp SampleTest/src/com/te/Samp
 
 
